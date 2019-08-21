@@ -98,7 +98,7 @@ a{
     top: 0;
     width: 100%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: space-between;
     font-size: 1.1rem;
@@ -120,20 +120,7 @@ a{
   .nav-title {
     font-size: 1.4rem;
     padding: 1rem;
-    color: var(--primary-color);
-  }
-  
-  .nav-contact {
-    display: flex;
-    font-style: italic;
-    color: var(--primary-color);
-    font-size: 1rem;
-    max-width: 80%;
-    text-align: center;
-  }
-  
-  .nav-contact > div {
-    padding: 0.7rem;
+    color: var(--birs-color);
   }
   
   i {
@@ -228,7 +215,7 @@ header{
 }
 
 #landing-page{
-    background: url(../img/agriculture-apples-branches-2821819.jpg) no-repeat center center/cover;
+    background: url(../img/branch-1299957.png) no-repeat bottom center/contain;
     height: 100%;
     width: 100%;
     display: flex;
@@ -236,6 +223,8 @@ header{
     align-items: flex-start;
     justify-content: flex-end;
     position: relative;
+    transform: translateY(70px) skewY(1.5deg);
+    transition: 700ms transform ease-in-out;
 }
 
 .landing-overlay{
@@ -244,7 +233,7 @@ header{
     left: 0;
     height: 100%;
     width: 100%;
-    background-color: rgba(206, 206, 206, 0.3);
+    background-color: rgba(206, 206, 206, 0.2);
     z-index: 1;
 }
 
@@ -255,7 +244,19 @@ header{
     max-height: 650px;
     position: relative;
     z-index: 2;
-    color: whitesmoke;
+    color: var(--primary-color);
+    transform: translateY(-90px) rotateY(20deg);
+    transition: 700ms transform ease-in-out 5ms;
+}
+
+.landing-title{
+  color: var(--birs-color);
+  padding: 2rem 0;
+}
+
+.landing-text{
+  line-height: 30px;
+  padding: 0 5rem 0 0;
 }
 
 /* THE FRUIT SECTION */
@@ -281,7 +282,7 @@ header{
   display: block;
   opacity: 0;
   height: 100%;
-  width: 100%;
+  width: 75%;
   transform: translateX(30%);
   transition: 300ms all ease-out 400ms;
 }
@@ -316,9 +317,37 @@ header{
   position: absolute;
   height: 100%;
   width: 40%;
-  background: url(../img/apple-landing-small.jpg) no-repeat center center/cover;
+  background: url(../img/quince-1737596_1280.jpg) no-repeat center center/cover;
   top: 0;
   right: 0;
+}
+
+.thefruit-card:nth-child(1) > .thefruit-card-pic{
+  background: url(../img/quince-1737596_1280.jpg) no-repeat center center/cover;
+}
+
+.thefruit-card:nth-child(2) > .thefruit-card-pic{
+  background: url(../img/quince-1812039_1920.jpg) no-repeat center center/cover;
+}
+
+.thefruit-card:nth-child(3) > .thefruit-card-pic{
+  background: url(../img/quince-3747516_1280.jpg) no-repeat center center/cover;
+}
+
+.thefruit-card:nth-child(4) > .thefruit-card-pic{
+  background: url(../img/quince-3770798_1920.jpg) no-repeat center center/cover;
+}
+
+.thefruit-card:nth-child(5) > .thefruit-card-pic{
+  background: url(../img/quince-61574_1920.jpg) no-repeat center center/cover;
+}
+
+.thefruit-card:nth-child(6) > .thefruit-card-pic{
+  background: url(../img/quince-65189_1920.jpg) no-repeat center center/cover;
+}
+
+.thefruit-card:nth-child(7) > .thedruid-card-pic{
+  background: url(../img/quince-1812039_1920.jpg) no-repeat center center/cover;
 }
 
 .thefruit-card-text{
@@ -326,6 +355,126 @@ header{
 }
 .thefruit-card-text > p{
   max-width: 650px;
+}
+
+/* ABOUT US SECTION */
+
+#about-us{
+  display: flex;
+  flex-direction: column;
+}
+
+.about-us-container{
+  height: 85vh;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+.about-us-text-content{
+  height: 100%;
+  margin: 0 0 0 5rem;
+  position: relative
+}
+
+/* .about-us-text-content::after{
+  content: "";
+  height: 50%;
+  width: 110%;
+  border: 15px rgb(212, 212, 212) solid;
+  position: absolute;
+  top: 50%;
+  left: 48%;
+  transform: translate(-50%, -50%);
+} */
+
+/* CONTACT FORM */
+
+.about-us-contact-content{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.required{
+  font-style: italic;
+  color: var(--birs-color);
+  font-size: 1rem;
+}
+
+.contact-container{
+  height: 100%;
+  width: 100%;
+  padding: 0 2rem;
+}
+
+#contact-form{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 3rem;
+}
+
+#contact-form > p{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.input-field{
+  height: 25px;
+}
+
+input{
+  border: none;
+  border-bottom: 1px solid var(--birs-color);
+  box-shadow: none;
+  padding: 1rem 0;
+  margin: .7rem 0;
+  transition: 200ms all ease-in-out;
+}
+
+input:hover,
+textarea:hover{
+  background: rgba(231, 214, 24, .3);
+  cursor: pointer;
+}
+
+input:focus,
+textarea:focus{
+  border: none;
+  border: .2px solid var(--birs-color);
+  box-shadow: none;
+  box-shadow: 0 0 3px var(--birs-color);
+  background: rgba(231, 214, 24, .3);
+  outline: none;
+}
+
+textarea{
+  border: none;
+  border-left: 1px solid var(--birs-color);
+  border-bottom: 1px solid var(--birs-color);
+  box-shadow: none;
+  transition: 200ms all ease-in-out;
+}
+
+.submit-btn > button{
+  border: none;
+  background: var(--birs-color);
+  padding: .6rem 1.2rem;
+  cursor: pointer;
+  font-size: 1.2rem;
+  border-radius: 15px;
+  margin: 2rem 0;
+  transition: 200ms all ease-in-out;
+}
+
+button:hover{
+  border-bottom-right-radius: 0;
 }
 
 /* PIC GALLERY & LIGHTWEIGHT */
