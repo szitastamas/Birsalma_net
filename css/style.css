@@ -58,13 +58,12 @@ a{
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgb(64, 104, 141);
-    background: var(--primary-color);
+    background: var(--birs-color);
     z-index: 50;
   }
   
   #loading{
-    color: whitesmoke;
+    color: var(--primary-color);
     font-size: 3rem;
   }
   
