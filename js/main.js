@@ -1,7 +1,18 @@
 let currentlyActive = 0;
 
+const landingText = document.querySelector('.landing-text-container');
+
 window.onload = () => {
     document.getElementById('loading-screen').remove();
+    setTimeout(function(){
+        document.getElementById('landing-page').style.transform = "none";
+        landingText.style.transform = "none";
+    },100)
+}
+
+window.onscroll = () => {
+    landingText.style.transform = "translateY(" + pageYOffset/10 + "px)"
+    console.log(pageYOffset/10)
 }
 
 const menuBtn = document.querySelector('.menu-btn');
@@ -15,17 +26,6 @@ menuBtn.addEventListener('click', () => {
 navLink.forEach(element => element.addEventListener('click', () => {
     document.querySelectorAll('.menu-show').forEach(item => item.classList.remove('menu-show'));
 }))
-
-window.onscroll = () => {
-    if(window.innerWidth > 874){
-        if(pageYOffset > 70){
-             document.querySelector('.nav-text-container').style.maxHeight = "0";
-         }
-    else{
-            document.querySelector('.nav-text-container').style.maxHeight = "70px"
-    }
-}
-}
 
 const isSectionInViewport = el => {
     var rect = el.getBoundingClientRect();
