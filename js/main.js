@@ -69,7 +69,7 @@ const nextBtn = document.getElementById('next-btn');
 const prevBtn = document.getElementById('prev-btn');
 
 let carouselCounter = 1;
-const size = 950;
+const size = 900;
 
 nextBtn.addEventListener('click', () => {
     if(carouselCounter >= carouselPics.length-1) return;
