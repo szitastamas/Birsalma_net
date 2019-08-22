@@ -252,7 +252,7 @@ header{
 /* THE FRUIT SECTION */
 
 #thefruit{
-  max-width: 90%;
+  max-width: 100%;
   margin: auto;
   overflow: hidden;
   opacity: 0;
@@ -528,8 +528,8 @@ button:hover{
 }
 
 .pic-gallery-container{
-  width: 950px;
-  height: 600px;
+  width: 900px;
+  height: 550px;
   margin: auto;
   position: relative;
   overflow: hidden;
