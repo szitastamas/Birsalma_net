@@ -2,8 +2,9 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
 
 :root{
-    --primary-color: rgb(56, 56, 56);
+    --primary-color: rgb(68, 68, 68);
     --birs-color: rgb(231, 214, 24);
+    --dark-birs: rgb(196, 181, 19);
     --secondary-color: rgb(122, 69, 0);
 }
 
@@ -139,7 +140,6 @@ a{
     list-style: none;
     /* background: rgb(255, 255, 255); */
     overflow-x: hidden;
-    border-top: 1px rgba(128, 128, 128, 0.671) solid;
     padding: 0.6rem 0;
   }
   
@@ -230,12 +230,12 @@ header{
 }
 
 .landing-text-container{
-    padding: 1rem;
-    margin: 0 0 12rem 0rem;
+    padding: 25rem 0;
+    margin-right: 12rem;
     max-width: 850px;
     max-height: 650px;
     color: var(--primary-color);
-    transform: translateY(10px);
+    transform: translatex(2rem);
     transition: 700ms transform ease-in-out 1ms;
 }
 
@@ -391,17 +391,10 @@ header{
 }
 
 .about-us-container{
-  height: 85vh;
-  width: 100%;
+  width: 85%;
+  margin: auto;
   display: grid;
-  grid-template-columns: 2fr 1fr;
-}
-
-.about-us-text-content{
-  height: 100%;
-  margin: 0 0 0rem 5rem;
-  display: grid;
-  grid-template-columns: repeat(2, 1.25fr) 1.5fr;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .about-us-text-card{
@@ -418,26 +411,39 @@ header{
   margin-bottom: 2rem;
 }
 
-.about-us-contact-icons > div{
+
+/* CONTACT CONTAINER */
+
+.contact-section-container{
+  width: 80%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+.contact-text{
+  padding: 0 2rem;
+}
+
+.contact-icons{
+  padding: 2rem;
+}
+
+.contact-icons > p{
+  padding: 0 0 2rem 0;
+}
+
+.contact-icons > div{
   margin-bottom: 1rem;
 }
 
-.about-us-contact-icons > div > i{
+.contact-icons > div > i{
   padding: 0;
   margin: 0 .7rem;
   color: var(--birs-color);
 }
 
-
 /* CONTACT FORM */
-
-.about-us-contact-content{
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
 
 .required{
   font-style: italic;
@@ -448,7 +454,7 @@ header{
 .contact-container{
   height: 100%;
   width: 100%;
-  padding: 0 2rem;
+  padding: 0 12rem;
 }
 
 #contact-form{
@@ -456,8 +462,8 @@ header{
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  padding: 2rem;
+  justify-content: center;
+  padding: 0 2rem;
 }
 
 #contact-form > p{
@@ -524,7 +530,7 @@ button:hover{
 /* PIC GALLERY CAROUSEL */
 
 #gallery{
-  padding: 7rem 0;
+  padding-bottom: 7rem;
 }
 
 .pic-gallery-container{
@@ -580,12 +586,77 @@ button:hover{
   background: rgba(80, 80, 80, 0.55);
 }
 
+/* HOW-TO-USE SECTION */
+
+#how-to-use-section{
+  display: none;
+}
+
+/* PRICE SECTION */
+
+#price-section{
+  background-color: var(--birs-color);
+  background: url(../img/quince-1737596_1280.jpg) no-repeat center center/contain;
+  background-position-x: 650px;
+}
+
+.price-card-container{
+  width: 40%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 1rem;
+}
+
+.price-card{
+  padding: 1rem 2rem;
+  margin: 0 6rem;
+  background: rgba(231, 214, 24, .1);
+  line-height: 40px;
+  position: relative;
+  border-radius: 10%;
+}
+
+/* .price-card::after{
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translatex(-50%);
+  height: 5px;
+  width: 90%;
+  background: linear-gradient(to bottom, rgba(207, 207, 207, 0.25), rgba(0, 0, 0, .3), rgba(207, 207, 207, 0.25));
+  box-shadow: 0 0 2px rgba(207, 207, 207, 0.25);
+  border-radius: 45%;
+} */
+
+.price-card-title{
+  font-size: 1.7rem;
+  color: var(--primary-color);
+  font-weight: 500;
+  padding: 1rem 0;
+  text-transform: uppercase;
+}
+
+.price-additional-info{
+  padding: 3rem;
+  font-size: 1.1rem;
+  text-align: right;
+  font-style: italic;
+  color: var(--dark-birs);
+  color: var(--secondary-color);
+}
+
   /* RESPONSIVENESS */
 
   @media (max-width: 1440px) {
+
+    #landing-page{
+      background-position-x: 850px;
+    }
   
     body {
-      font-size: 1.1rem;
+      font-size: 1rem;
     }
   
     i {
@@ -603,9 +674,42 @@ button:hover{
     .nav-contact {
       font-size: 0.9rem;
     }
+    .section-top{
+      width: 100%;
+    }
+  
+    .section-top,
+    h2{
+      font-size: 1.6rem;
+    }
+
+    .submit-btn > button{
+      font-size: 1rem;
+    }
+
+    .thefruit-card-text{
+      width: 45%;
+    }
+
   }
+
   
   @media (max-width: 1025px) {
+
+    #landing-page{
+      background-position-x: 450px;
+    }
+
+    .landing-text-container{
+      margin-right: 2rem;
+      padding: 0;
+      transform: translatex(0);
+      width: 70%;
+    }
+
+    .section-top{
+      padding: 8rem 1rem;
+    }
 
     .nav-contact {
       font-weight: 600;
@@ -626,7 +730,20 @@ button:hover{
     .nav-contact {
       font-size: 0.9rem;
     }
-  
+
+    .about-us-text-content{
+      justify-content: space-between;
+    }
+
+    .about-us-text-card{
+      margin: 0 .9rem;
+    }
+
+    .about-us-text{
+      line-height: 25px;
+      margin-bottom: 2rem;
+    }
+
     #footer {
       font-size: 1.1rem;
     }
@@ -651,11 +768,7 @@ button:hover{
     section {
       max-width: 100%;
     }
-  
-    .section-top,
-    #process-section .section-top {
-      display: none;
-    }
+
   
     .nav-contact {
       display: none;
