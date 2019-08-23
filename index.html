@@ -26,10 +26,10 @@
             <ul class="nav-links">
                 <li class="home"><a class="nav-link" href="#">Kezdőlap</a></li>
                 <li class="thefruit"><a class="nav-link" href="#thefruit">A birsről</a></li>
-                <li class="how-to-use"><a class="nav-link" href="#how-to-use">Felhasználás</a></li>
-                <li class="tips"><a class="nav-link" href="#tips">Tippek</a></li>
-                <li class="about-us"><a class="nav-link" href="#about-us-section">Rólunk</a></li>
-                <li class="contact"><a class="nav-link" href="#contact-section">Kapcsolat</a></li>
+                <li class="about-us"><a class="nav-link" href="#about-us">Rólunk</a></li>
+                <li class="how-to-use"><a class="nav-link" href="#gallery">Galéria</a></li>
+                <li class="tips"><a class="nav-link" href="#how-to-use-section">Felhasználás</a></li>
+                <li class="contact"><a class="nav-link" href="#price-section">Árak</a></li>
             </ul>
         </div>
     </nav>
@@ -44,10 +44,10 @@
         </div>
     </header>
 
-    <div class="section-top">
-        <h2>A birs fajtái</h2>
-    </div>
     <section id="thefruit">
+        <div class="section-top">
+            <h2>A birs fajtái</h2>
+        </div>
         <div class="thefruit-container">
             <div class="thefruit-list-container">
                 <ul class="thefruit-list">
@@ -131,26 +131,54 @@
     <section id="tips"></section>
 
 
-    <div class="section-top" style="background: none; padding: 2rem 8rem;"><h2>Rólunk</h2></div>
     <section id="about-us">
+        <div class="section-top" style="background: none; padding: 2rem 8rem;"><h2>Rólunk</h2></div>
         <div class="about-us-container">
-            <div class="about-us-text-content">
-                <div class="about-us-text-card">
-                    <h3 class="about-us-title">Kik vagyunk</h3>
-                    <div class="about-us-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, eaque ullam. Voluptatibus deserunt tempore dolorem praesentium eligendi molestiae architecto voluptas optio numquam eaque corrupti exercitationem illo aperiam, ipsa natus. Autem!</div>
-                </div>
-                <div class="about-us-text-card">
-                    <h3 class="about-us-title">Mit csinálunk</h3>
-                    <div class="about-us-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, eaque ullam. Voluptatibus deserunt tempore dolorem praesentium eligendi molestiae architecto voluptas optio numquam eaque corrupti exercitationem illo aperiam, ipsa natus. Autem!</div>
-                </div>
-                <div class="about-us-text-card">
-                    <h3 class="about-us-title">Hogyan érhet el bennünket</h3>
-                    <div class="about-us-contact-icons">
-                        <p class="about-us-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis repudiandae molestiae provident. Ducimus, maxime vitae.</p>
-                        <div class="phone"><i class="fas fa-mobile-alt"></i><span class="bold">Mobil:</span> 0630/555-5555</div>
-                        <div class="e-mail"><i class="far fa-envelope"></i><span class="bold">E-Mail:</span> info@birsalma.hu</div>
-                        <div class="cím"><i class="far fa-building"></i><span class="bold">Cím:</span> 0156 Kecskemét, Birsalma u. 54.</div>
-                    </div>
+            <div class="about-us-text-card">
+                <h3 class="about-us-title">Kik vagyunk</h3>
+                <div class="about-us-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, eaque ullam. Voluptatibus deserunt tempore dolorem praesentium eligendi molestiae architecto voluptas optio numquam eaque corrupti exercitationem illo aperiam, ipsa natus. Autem!</div>
+            </div>
+            <div class="about-us-text-card">
+                <h3 class="about-us-title">Mit csinálunk</h3>
+                <div class="about-us-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, eaque ullam. Voluptatibus deserunt tempore dolorem praesentium eligendi molestiae architecto voluptas optio numquam eaque corrupti exercitationem illo aperiam, ipsa natus. Autem!</div>
+            </div>
+            <div class="about-us-text-card">
+                <h3 class="about-us-title">Áraink</h3>
+                <div class="about-us-text">Az étkezési és pálinkának való birs vásárlásáról további információt és pontos árat személyes megbeszélés útján tudunk biztosítani. Keressenek minket bizalommal levélben, telefonon vagy személyesen!</div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="gallery">
+        <div class="section-top"><h2>Galéria</h2></div>
+        <div class="pic-gallery-container">
+            <i class="fas fa-arrow-left" id="prev-btn"></i>
+            <i class="fas fa-arrow-right" id="next-btn"></i>
+            <div class="carousel-slide">
+                <img src="img/quince-65189_1920.jpg" id="lastClone" alt="">
+                <img src="img/quince-1737596_1280.jpg" alt="">
+                <img src="img/quince-1812039_1920.jpg" alt="">
+                <img src="img/quince-61574_1920.jpg" alt="">
+                <img src="img/quince-65189_1920.jpg" alt="">
+                <img src="img/quince-1737596_1280.jpg" id="firstClone" alt="">
+            </div>            
+        </div>
+    </section>
+    
+    <section id="how-to-use-section">
+        <div class="section-top"><h2>Felhasználás</h2></div>
+    </section>
+    
+    <section id="contact-section">
+        <div class="section-top"><h2>Kapcsolat</h2></div>
+        <div class="contact-section-container">
+            <div class="contact-text">
+                <h3 class="landing-title">Hogyan érhet el bennünket</h3>
+                <div class="contact-icons">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis repudiandae molestiae provident. Ducimus, maxime vitae.</p>
+                    <div class="phone"><i class="fas fa-mobile-alt"></i><span class="bold">Mobil:</span> 0630/555-5555</div>
+                    <div class="e-mail"><i class="far fa-envelope"></i><span class="bold">E-Mail:</span> info@birsalma.hu</div>
+                    <div class="cím"><i class="far fa-building"></i><span class="bold">Cím:</span> 0156 Kecskemét, Birsalma u. 54.</div>
                 </div>
             </div>
             <div class="about-us-contact-content">
@@ -186,29 +214,6 @@
                 </div>
             </div>
         </div>
-    </section>
-    <div class="section-top"><h2>Galéria</h2></div>
-    <section id="gallery">
-        <div class="pic-gallery-container">
-            <i class="fas fa-arrow-left" id="prev-btn"></i>
-            <i class="fas fa-arrow-right" id="next-btn"></i>
-            <div class="carousel-slide">
-                <img src="img/quince-65189_1920.jpg" id="lastClone" alt="">
-                <img src="img/quince-1737596_1280.jpg" alt="">
-                <img src="img/quince-1812039_1920.jpg" alt="">
-                <img src="img/quince-61574_1920.jpg" alt="">
-                <img src="img/quince-65189_1920.jpg" alt="">
-                <img src="img/quince-1737596_1280.jpg" id="firstClone" alt="">
-            </div>            
-        </div>
-    </section>
-
-    <div class="section-top"><h2>Felhasználás</h2></div>
-    <section id="how-to-use">
-    </section>
-
-    <section id="contact-section">
-
     </section>
 
 </body>
