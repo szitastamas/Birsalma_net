@@ -414,6 +414,7 @@ header{
 #about-us > .section-top,
 #gallery > .section-top{
   padding: 2rem 8rem;
+  background: none;
 }
 
 
