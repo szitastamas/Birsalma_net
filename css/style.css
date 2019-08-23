@@ -411,6 +411,11 @@ header{
   margin-bottom: 2rem;
 }
 
+#about-us > .section-top,
+#gallery > .section-top{
+  padding: 2rem 8rem;
+}
+
 
 /* CONTACT CONTAINER */
 
@@ -761,8 +766,20 @@ footer{
       padding: 8rem 1rem;
     }
 
+    #about-us > .section-top,
+    #gallery > .sectioin-top{
+      padding: 2rem 1rem;
+    }
+
     .nav-contact {
       font-weight: 600;
+    }
+
+    .nav-links > li {
+      padding: 0.7rem 1rem;
+      margin: 0 1rem;
+      position: relative;
+      text-decoration: none;
     }
   
     .bold {
@@ -798,20 +815,21 @@ footer{
       font-size: 1.1rem;
     }
 
-    #contact-section{
-      margin-top: 0;
+    .contact-container{
+      padding: 0 6rem;
     }
-  
-    .contact-quote-person{
-      flex-direction: column;
+
+    .contact-section-container{
+      width: 100%;
     }
-  
-    .contact-quote-avatar{
-      width: 80px;
-      height: 80px;
-      margin: 0 0 1rem 0;
+
+    .contact-icons{
+      padding: 1rem;
     }
-  
+
+    .contact-text{
+      padding: 0;
+    }
   }
   
   @media (max-width: 869px) {
