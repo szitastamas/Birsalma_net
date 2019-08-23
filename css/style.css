@@ -4,7 +4,7 @@
 :root{
     --primary-color: rgb(68, 68, 68);
     --birs-color: rgb(231, 214, 24);
-    --dark-birs: rgb(196, 181, 19);
+    --dark-birs: rgb(192, 176, 5);
     --secondary-color: rgb(122, 69, 0);
 }
 
@@ -645,6 +645,56 @@ button:hover{
   font-style: italic;
   color: var(--dark-birs);
   color: var(--secondary-color);
+}
+
+footer{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: right;
+  font-size: 1rem;
+  padding: 1rem 4rem;
+  color: var(--birs-color);
+  background: var(--primary-color);
+}
+
+.impressum-section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.impressum-section > p{
+  margin: 1rem 0;
+}
+
+.impressum-section > a{
+  text-decoration: none;
+  color: white;
+  transition: 200ms color ease-out;
+  cursor: pointer;
+  margin: 0 0 1rem 0;
+}
+
+.impressum-section > a:hover{
+  color: var(--birs-color);
+}
+
+.madgoat{
+  text-decoration: none;
+  color: var(--birs-color);
+  cursor: pointer;
+  font-weight: 600;
+  transition: 200ms color ease-out;
+}
+
+.madgoat:hover{
+  color: rgb(0, 135, 168);
+}
+
+.rights-section{
+  margin: 10rem 30rem;
 }
 
   /* RESPONSIVENESS */
