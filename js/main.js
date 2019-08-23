@@ -14,7 +14,7 @@ window.onload = () => {
 let bckgPicPos = 0
 if(window.innerWidth > 1440){
     bckgPicPos = 1050
-}else if(window.innerWidth < 1440 && window.innerWidth > 1025){
+}else if(window.innerWidth <= 1440 && window.innerWidth >= 1025){
     bckgPicPos = 850;
 }else if(window.innerWidth < 1025){
     bckgPicPos = 450;
