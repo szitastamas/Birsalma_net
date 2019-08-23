@@ -1,4 +1,4 @@
-let currentlyActive = 0;
+/* ON DOM CONTENT LOADED */
 
 const landingText = document.querySelector('.landing-text-container');
 
@@ -6,17 +6,31 @@ window.onload = () => {
     document.getElementById('loading-screen').remove();
     setTimeout(function(){
         document.getElementById('landing-page').style.transform = "none";
-        landingText.style.transform = "translate(-200px,-90px)";
+        landingText.style.transform = "none";
     },100)
     carouselSlide.style.transform = "translateX(" + (-size * carouselCounter) + "px)";
 }
 
+let bckgPicPos = 0
+if(window.innerWidth > 1440){
+    bckgPicPos = 1050
+}else if(window.innerWidth < 1440 && window.innerWidth > 1025){
+    bckgPicPos = 850;
+}else if(window.innerWidth < 1025){
+    bckgPicPos = 450;
+}
+
+/* SCROLLING EFFECTS AND BEHAVIOUR */
+
 window.onscroll = () => {
-    landingText.style.transform = "translate(-200px," + pageYOffset/7 + "px)"
+    landingText.style.transform = "translateY(" + pageYOffset/7 + "px)"
+    document.getElementById('landing-page').style.backgroundPositionX = bckgPicPos-(pageYOffset/9) + "px";
     if(isSectionInViewport(document.getElementById('thefruit'))){
         document.querySelector('#thefruit').style.opacity = "1";
     }
 }
+
+/* RESPONSIVE MENU */
 
 const menuBtn = document.querySelector('.menu-btn');
 const navLink = document.querySelectorAll('.nav-link');
@@ -30,6 +44,8 @@ navLink.forEach(element => element.addEventListener('click', () => {
     document.querySelectorAll('.menu-show').forEach(item => item.classList.remove('menu-show'));
 }))
 
+/* IS SECTION IN VIEWPORT */
+
 const isSectionInViewport = el => {
     var rect = el.getBoundingClientRect();
   
@@ -42,10 +58,14 @@ const isSectionInViewport = el => {
     );
   };
 
+  /* FRUIT INFO CARDS */
+
   function clearActives(){
       document.querySelectorAll('.is-active').forEach(item => item.classList.remove('is-active'));
       document.querySelectorAll('.card-show').forEach(card => card.classList.remove('card-show'));
   }
+
+  let currentlyActive = 0;
 
   const fruitListPoints = document.querySelectorAll('.thefruit-list-point'),
   fruitCards = document.querySelectorAll('.thefruit-card');
@@ -98,5 +118,3 @@ carouselSlide.addEventListener('transitionend', () => {
         carouselSlide.style.transform = "translateX(" + (-size * carouselCounter) + "px)";
     }
 })
-
-console.log(carouselCounter);
