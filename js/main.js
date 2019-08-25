@@ -118,3 +118,80 @@ carouselSlide.addEventListener('transitionend', () => {
         carouselSlide.style.transform = "translateX(" + (-size * carouselCounter) + "px)";
     }
 })
+
+
+/* CONTACT FORM */
+
+// Reference messages collection
+//var messagesRef = firebase.database().ref('messages');
+
+const contactForm = document.getElementById('contact-form');
+
+contactForm.addEventListener('submit', submitContact);
+const alertMsg = document.querySelector('.alert');
+
+function submitContact(e){
+    e.preventDefault();
+
+    var name = getInputValue('name');
+    var company = getInputValue('company');
+    var email = getInputValue('email');
+    var phone = getInputValue('phone');
+    var message = getInputValue('message');
+
+    //saveMessage(name, company, email, phone, message);
+    
+    alertMsg.style.opacity = "1";
+    alertMsg.style.transform = "none";
+    alertMsg.style.zIndex = "10";
+    alertMsg.classList.add(alertStyling());
+    alertMsg.innerHTML =
+        `<h2 style="margin-bottom: 2rem">Kedves ${name}!</h2>
+        <p>${alertText}</p>
+        `
+
+    setTimeout(() => {
+        alertMsg.style.opacity = "0";
+        alertMsg.style.transform = "scale(.3)";
+        alertMsg.style.zIndex = "-5";
+        alertMsg.innerHTML = "";
+        alertMsg.classList = "alert";
+    }, 3000)
+
+    setTimeout(() => {
+        alertMsg.style.transform = "translateY(-15rem)";
+    }, 3500)
+
+}
+
+let alertClass = "";
+let alertText = "";
+function alertStyling(){
+    if(getInputValue('name').length < 7 || getInputValue('message').length < 8){
+        alertClass = "error"
+        alertText = "Kérem töltsön ki megfelelően minden mezőt!"
+    }
+    else{
+        alertClass = "success"
+        alertText = "Köszönjük a levelét!"
+        contactForm.reset();
+    }
+
+    return alertClass;
+}
+
+function getInputValue(id){
+    return document.getElementById(id).value;
+}
+
+// Save message to firebase
+// function saveMessage(name, company, email, phone, message){
+//     var newMessageRef = messagesRef.push();
+//     newMessageRef.set({
+//       name: name,
+//       company:company,
+//       email:email,
+//       phone:phone,
+//       message:message
+//     });
+//   }
