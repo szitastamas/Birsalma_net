@@ -414,11 +414,14 @@ header{
 #about-us > .section-top,
 #gallery > .section-top{
   padding: 2rem 8rem;
-  background: none;
 }
 
 
 /* CONTACT CONTAINER */
+
+#contact-section{
+  margin-bottom: 20rem;
+}
 
 .contact-section-container{
   width: 80%;
@@ -470,6 +473,8 @@ header{
   align-items: center;
   justify-content: center;
   padding: 0 2rem;
+  position: relative;
+  overflow: hidden;
 }
 
 #contact-form > p{
@@ -478,6 +483,10 @@ header{
   width: 100%;
 }
 
+#contact-form > .landing-title{
+  align-self: flex-start;
+  padding-left: 0;
+}
 
 input{
   border: none;
@@ -531,6 +540,33 @@ textarea{
 button:hover{
   border-bottom-right-radius: 0;
   background: rgb(255, 236, 29);
+}
+
+.alert{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  padding: 2rem;
+  text-align: center;
+  transform: translateY(-15rem);
+  opacity: 0;
+  z-index: -5;
+  transition: 500ms all ease-in-out;
+  color: white;
+}
+
+.success{
+  background: rgba(49, 153, 49, 0.9);
+  background: var(--birs-color);
+}
+
+.error{
+  background: rgba(255, 65, 65, 0.9);
 }
 
 /* PIC GALLERY CAROUSEL */
@@ -770,6 +806,7 @@ footer{
     #about-us > .section-top,
     #gallery > .sectioin-top{
       padding: 2rem 1rem;
+      background: none;
     }
 
     .nav-contact {
