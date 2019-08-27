@@ -6,7 +6,8 @@ let callingSlider = setInterval(nextCarousel, 4000);
 
 
 window.onload = () => {
-    document.getElementById('loading-screen').remove();
+    document.querySelector('.loading-container').style.opacity = "0";
+    setTimeout(()=>{document.getElementById('loading-screen').remove()},2000);
     setTimeout(function(){
         document.getElementById('landing-page').style.transform = "none";
         landingText.style.transform = "none";
