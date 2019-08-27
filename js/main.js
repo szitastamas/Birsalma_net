@@ -106,7 +106,7 @@ function nextCarousel(){
     setTimeout(()=>{
         progressBar.style.transition = "width 3800ms";
         progressBar.style.width = "100%";
-    },5)
+    },20)
     carouselSlide.style.transition = "transform 400ms ease-in-out";
     carouselCounter++;
     carouselSlide.style.transform = "translateX(" + (-100 * carouselCounter) + "%)";
@@ -118,7 +118,7 @@ function prevCarousel(){
     setTimeout(()=>{
         progressBar.style.transition = "width 3800ms";
         progressBar.style.width = "100%";
-    },10)
+    },20)
     carouselSlide.style.transition = "transform 400ms ease-in-out";
     carouselCounter--;
     carouselSlide.style.transform = "translateX(" + (-100 * carouselCounter) + "%)";
