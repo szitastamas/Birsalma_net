@@ -88,21 +88,37 @@ const isSectionInViewport = el => {
 /* CAROUSEL SECTION */
 
 const carouselSlide = document.querySelector('.carousel-slide');
-const carouselPics = document.querySelectorAll('.carousel-slide img');
+const carouselPics = document.querySelectorAll('.carousel-slide-card');
 const nextBtn = document.getElementById('next-btn');
 const prevBtn = document.getElementById('prev-btn');
+const progressBar = document.getElementById('progress-bar');
 
 let carouselCounter = 1;
 
+function progressBarFunction(){
+    progressBar.style.transition = "none";
+    progressBar.style.width = "0%";
+}
+
 function nextCarousel(){
-    if(carouselCounter >= carouselPics.length-1) return
+    progressBarFunction();
+    if(carouselCounter >= carouselPics.length-1) return;
+    setTimeout(()=>{
+        progressBar.style.transition = "width 3800ms";
+        progressBar.style.width = "100%";
+    },5)
     carouselSlide.style.transition = "transform 400ms ease-in-out";
     carouselCounter++;
     carouselSlide.style.transform = "translateX(" + (-100 * carouselCounter) + "%)";
 }
 
 function prevCarousel(){
+    progressBarFunction();
     if(carouselCounter <= 0) return;
+    setTimeout(()=>{
+        progressBar.style.transition = "width 3800ms";
+        progressBar.style.width = "100%";
+    },10)
     carouselSlide.style.transition = "transform 400ms ease-in-out";
     carouselCounter--;
     carouselSlide.style.transform = "translateX(" + (-100 * carouselCounter) + "%)";
