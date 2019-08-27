@@ -359,7 +359,7 @@ header{
 }
 
 .thefruit-card:nth-child(4) > .thefruit-card-pic{
-  background: url(../img/quince-3770798_1920.jpg) no-repeat center center/cover;
+  background: url(../img/vranjai.jpg) no-repeat center center/cover;
 }
 
 .thefruit-card:nth-child(5) > .thefruit-card-pic{
@@ -367,7 +367,7 @@ header{
 }
 
 .thefruit-card:nth-child(6) > .thefruit-card-pic{
-  background: url(../img/quince-65189_1920.jpg) no-repeat center center/contain;
+  background: url(../img/leskovaci.jpg) no-repeat center center/contain;
 }
 
 .thefruit-card:nth-child(7) > .thedruid-card-pic{
