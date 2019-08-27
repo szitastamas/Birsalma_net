@@ -6,24 +6,9 @@ let callingSlider = setInterval(nextCarousel, 4000);
 
 
 window.onload = () => {
-    //document.querySelector('.loading-container').style.opacity = "0";
-    //setTimeout(()=>{document.getElementById('loading-screen').remove()},2000);
-    setTimeout(function(){
-        //document.getElementById('landing-page').style.transform = "none";
-        landingText.style.transform = "none";
-    },100)
     carouselCounter = 0;
     callingSlider;
 }
-
-// let bckgPicPos = 0
-// if(window.innerWidth > 1440){
-//     bckgPicPos = 1050
-// }else if(window.innerWidth <= 1440 && window.innerWidth >= 1025){
-//     bckgPicPos = 850;
-// }else if(window.innerWidth < 1025){
-//     bckgPicPos = 450;
-// }
 
 /* SCROLLING EFFECTS AND BEHAVIOUR */
 
