@@ -388,6 +388,7 @@ header{
   flex-direction: column;
   position: relative;
   overflow: hidden;
+  padding-bottom: 3rem;
 }
 
 .about-us-container{
