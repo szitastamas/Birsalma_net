@@ -76,6 +76,7 @@ const carouselSlide = document.querySelector('.carousel-slide');
 const carouselPics = document.querySelectorAll('.carousel-slide-card');
 const nextBtn = document.getElementById('next-btn');
 const prevBtn = document.getElementById('prev-btn');
+const pauseBtn = document.getElementById('pause-btn');
 const progressBar = document.getElementById('progress-bar');
 
 let carouselCounter = 1;
@@ -109,14 +110,6 @@ function prevCarousel(){
     carouselSlide.style.transform = "translateX(" + (-100 * carouselCounter) + "%)";
 };
 
-carouselSlide.addEventListener('mouseover', ()=>{
-    clearInterval(callingSlider);
-})
-
-carouselSlide.addEventListener('mouseleave', ()=>{
-    callingSlider = setInterval(nextCarousel, 4000);
-})
-
 nextBtn.addEventListener('click', ()=>{
     clearInterval(callingSlider);
     nextCarousel();
@@ -142,6 +135,20 @@ carouselSlide.addEventListener('transitionend', () => {
         carouselSlide.style.transform = "translateX(" + (-100 * carouselCounter) + "%)";
     }
 })
+
+carouselPics.forEach(pic => pic.addEventListener('mouseover', ()=>{
+    clearInterval(callingSlider);
+    progressBar.style.transition = "none";
+    pauseBtn.style.opacity = ".7";
+    progressBar.style.width = "0";
+}))
+
+carouselPics.forEach(pic => pic.addEventListener('mouseleave', ()=>{
+    callingSlider = setInterval(nextCarousel, 4000);
+    progressBar.style.transition = "width 3400ms ease-in-out";
+    pauseBtn.style.opacity = "0";
+    progressBar.style.width = "100%";
+}))
 
 
 /* CONTACT FORM */
