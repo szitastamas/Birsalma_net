@@ -223,8 +223,6 @@ header{
 }
 
 #landing-page{
-    /* background: url(../img/landing-birs.jpg) no-repeat bottom center/contain;
-    background-position-x: 1050px; */
     background: url(../img/landing-birs.jpg) no-repeat center center/cover;
     height: 100%;
     width: 100%;
@@ -232,8 +230,6 @@ header{
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
-    /* transform: translateY(-70px) skewY(1deg); */
-    transition: 1000ms all ease-in-out;
 }
 
 .landing-text-container{
@@ -243,8 +239,7 @@ header{
     max-height: 650px;
     color: var(--primary-color);
     color: whitesmoke;
-    transform: translatex(2rem);
-    transition: 700ms transform ease-in-out 1ms;
+    transition: 800ms transform ease-in-out 1ms;
 }
 
 .landing-title{
@@ -447,13 +442,13 @@ header{
 
 .about-branch{
   position: absolute;
-  height: 100%;
-  width: 100%;
-  bottom: -55%;
-  left: 20%;
+  height: 120%;
+  width: 120%;
+  bottom: -58%;
+  left: -85%;
   background: url(../img/branch-1299957.png) no-repeat center bottom/cover;
-  z-index: 150;
-  transform: rotate(20deg);
+  z-index: 20;
+  transform: rotate(15deg);
 }
 
 .contact-icons{
