@@ -58,16 +58,23 @@ a{
     height: 100vh;
     top: 0;
     left: 0;
+    z-index: 50;
+    overflow: hidden;
+  }
+
+  .loading-container{
+    height: 100%;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: var(--birs-color);
-    z-index: 50;
+    background: url(../img/landing-birs.jpg) no-repeat center center/cover;
+    transition: 300ms opacity ease-out;
   }
   
   #loading{
-    color: var(--primary-color);
-    font-size: 3rem;
+    color: whitesmoke;
+    font-size: 5rem;
   }
   
   .loading-dots{
