@@ -714,6 +714,21 @@ button:hover{
   transition: width 4000ms;
 }
 
+#pause-btn{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: 700ms ease opacity;
+  font-size: 55px;
+  background: rgba(80, 80, 80, 0.55);
+  color: var(--birs-color);
+  z-index: 20;
+  padding: 1rem;
+  border-radius: 50%;
+}
+
 /* HOW-TO-USE SECTION */
 
 #how-to-use-section{
