@@ -576,27 +576,76 @@ button:hover{
 }
 
 .pic-gallery-container{
-  width: 900px;
-  height: 550px;
+  width: 85%;
+  height: 85vh;
   margin: auto;
   position: relative;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .carousel-slide{
   display: flex;
   height: 100%;
+  width: 100%;
 }
 
-.carousel-slide > img{
-  height: auto;
-  width: 100%;
+.carousel-slide-card{
+  min-width: 100%;
+  height: 100%;
+}
+
+#firstClone{
+  background: url(../img/slider1.jpg) no-repeat center center/cover;
+}
+
+#lastClone{
+  background: url(../img/slider10.jpg) no-repeat center bottom/cover;
+}
+
+.carousel-slide-card:nth-child(2){
+  background: url(../img/slider1.jpg) no-repeat center center/cover;
+}
+
+.carousel-slide-card:nth-child(3){
+  background: url(../img/slider2.jpg) no-repeat center center/cover;
+}
+
+.carousel-slide-card:nth-child(4){
+  background: url(../img/slider3.jpg) no-repeat center center/cover;
+}
+
+.carousel-slide-card:nth-child(5){
+  background: url(../img/slider4.jpg) no-repeat center center/cover;
+}
+
+.carousel-slide-card:nth-child(6){
+  background: url(../img/slider5.jpg) no-repeat center center/cover;
+}
+
+.carousel-slide-card:nth-child(7){
+  background: url(../img/slider6.jpg) no-repeat center center/cover;
+}
+
+.carousel-slide-card:nth-child(8){
+  background: url(../img/slider7.jpg) no-repeat center center/cover;
+}
+
+.carousel-slide-card:nth-child(9){
+  background: url(../img/slider8.jpg) no-repeat center center/cover;
+}
+
+.carousel-slide-card:nth-child(10){
+  background: url(../img/slider9.jpg) no-repeat center center/cover;
+}
+
+.carousel-slide-card:nth-child(11){
+  background: url(../img/slider10.jpg) no-repeat center bottom/cover;
 }
 
 #next-btn{
   padding: 1rem;
   border-radius: 50%;
-  background: rgba(37, 37, 37, 0.55);
+  background: whitesmoke;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -611,7 +660,7 @@ button:hover{
 #prev-btn{
   padding: 1rem;
   border-radius: 50%;
-  background: rgba(37, 37, 37, 0.55);
+  background: whitesmoke;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -628,11 +677,24 @@ button:hover{
   background: rgba(80, 80, 80, 0.55);
 }
 
+#progress-bar{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin-top: 10px;
+  height: 10px;
+  width: 0;
+  background: var(--birs-color);
+  z-index: 20;
+  transition: width 4000ms;
+}
+
 /* HOW-TO-USE SECTION */
 
 #how-to-use-section{
   display: none;
 }
+
 
 /* PRICE SECTION */
 
