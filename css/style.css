@@ -573,11 +573,12 @@ button:hover{
 
 #gallery{
   padding-bottom: 7rem;
+  background: var(--primary-color);
 }
 
 .pic-gallery-container{
-  width: 85%;
-  height: 85vh;
+  width: 80%;
+  height: 80vh;
   margin: auto;
   position: relative;
   overflow-x: hidden;
