@@ -416,7 +416,8 @@ header{
 }
 
 #about-us > .section-top,
-#gallery > .section-top{
+#gallery > .section-top,
+#contact-section > .section-top{
   padding: 2rem 8rem;
 }
 
@@ -424,7 +425,8 @@ header{
 /* CONTACT CONTAINER */
 
 #contact-section{
-  margin-bottom: 20rem;
+  /* margin-bottom: 20rem; */
+  overflow:  hidden;
 }
 
 .contact-section-container{
@@ -440,15 +442,18 @@ header{
   background: transparent;
 }
 
-.about-branch{
+.about-us-contact-content{
+  position: relative;
+}
+
+.form-branch{
   position: absolute;
   height: 120%;
-  width: 120%;
-  bottom: -58%;
-  left: -85%;
-  background: url(../img/branch-1299957.png) no-repeat center bottom/cover;
+  width: 50%;
+  background: url(../img/branch-1299957.png) no-repeat center center/contain;
+  bottom: -20%;
+  right: -20%;
   z-index: 20;
-  transform: rotate(15deg);
 }
 
 .contact-icons{
@@ -705,7 +710,7 @@ button:hover{
   height: 10px;
   width: 0;
   background: var(--birs-color);
-  z-index: 20;
+  z-index: 5;
   transition: width 4000ms;
 }
 
