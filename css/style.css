@@ -789,10 +789,6 @@ footer{
   /* RESPONSIVENESS */
 
   @media (max-width: 1440px) {
-
-    #landing-page{
-      background-position-x: 850px;
-    }
   
     body {
       font-size: 1rem;
@@ -834,10 +830,6 @@ footer{
 
   
   @media (max-width: 1025px) {
-
-    #landing-page{
-      background-position-x: 450px;
-    }
 
     .landing-text-container{
       margin-right: 2rem;
