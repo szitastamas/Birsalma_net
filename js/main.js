@@ -104,9 +104,9 @@ function nextCarousel(){
     progressBarFunction();
     if(carouselCounter >= carouselPics.length-1) return;
     setTimeout(()=>{
-        progressBar.style.transition = "width 3800ms";
+        progressBar.style.transition = "width 3400ms ease-in-out";
         progressBar.style.width = "100%";
-    },20)
+    },400)
     carouselSlide.style.transition = "transform 400ms ease-in-out";
     carouselCounter++;
     carouselSlide.style.transform = "translateX(" + (-100 * carouselCounter) + "%)";
@@ -116,9 +116,9 @@ function prevCarousel(){
     progressBarFunction();
     if(carouselCounter <= 0) return;
     setTimeout(()=>{
-        progressBar.style.transition = "width 3800ms";
+        progressBar.style.transition = "width 3400ms ease-in-out";
         progressBar.style.width = "100%";
-    },20)
+    },400)
     carouselSlide.style.transition = "transform 400ms ease-in-out";
     carouselCounter--;
     carouselSlide.style.transform = "translateX(" + (-100 * carouselCounter) + "%)";
