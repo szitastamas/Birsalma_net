@@ -367,7 +367,7 @@ header{
 }
 
 .thefruit-card:nth-child(6) > .thefruit-card-pic{
-  background: url(../img/leskovaci.jpg) no-repeat center center/contain;
+  background: url(../img/leskovaci.jpg) no-repeat center center/cover;
 }
 
 .thefruit-card:nth-child(7) > .thedruid-card-pic{
