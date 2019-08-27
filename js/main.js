@@ -2,13 +2,17 @@
 
 const landingText = document.querySelector('.landing-text-container');
 
+let callingSlider = setInterval(nextCarousel, 4000);
+
+
 window.onload = () => {
     document.getElementById('loading-screen').remove();
     setTimeout(function(){
         document.getElementById('landing-page').style.transform = "none";
         landingText.style.transform = "none";
     },100)
-    carouselSlide.style.transform = "translateX(" + (-size * carouselCounter) + "px)";
+    carouselCounter = 0;
+    callingSlider;
 }
 
 let bckgPicPos = 0
@@ -89,33 +93,52 @@ const nextBtn = document.getElementById('next-btn');
 const prevBtn = document.getElementById('prev-btn');
 
 let carouselCounter = 1;
-const size = 900;
 
-nextBtn.addEventListener('click', () => {
-    if(carouselCounter >= carouselPics.length-1) return;
+function nextCarousel(){
+    if(carouselCounter >= carouselPics.length-1) return
     carouselSlide.style.transition = "transform 400ms ease-in-out";
     carouselCounter++;
-    carouselSlide.style.transform = "translateX(" + (-size * carouselCounter) + "px)";
-})
+    carouselSlide.style.transform = "translateX(" + (-100 * carouselCounter) + "%)";
+}
 
-prevBtn.addEventListener('click', () => {
+function prevCarousel(){
     if(carouselCounter <= 0) return;
     carouselSlide.style.transition = "transform 400ms ease-in-out";
     carouselCounter--;
-    carouselSlide.style.transform = "translateX(" + (-size * carouselCounter) + "px)";
+    carouselSlide.style.transform = "translateX(" + (-100 * carouselCounter) + "%)";
+};
+
+carouselSlide.addEventListener('mouseover', ()=>{
+    clearInterval(callingSlider);
+})
+
+carouselSlide.addEventListener('mouseleave', ()=>{
+    callingSlider = setInterval(nextCarousel, 4000);
+})
+
+nextBtn.addEventListener('click', ()=>{
+    clearInterval(callingSlider);
+    nextCarousel();
+    callingSlider = setInterval(nextCarousel, 4000);
+})
+
+prevBtn.addEventListener('click', () => {
+    clearInterval(callingSlider);
+    prevCarousel();
+    callingSlider = setInterval(nextCarousel, 4000);
 })
 
 carouselSlide.addEventListener('transitionend', () => {
     if(carouselPics[carouselCounter].id === 'lastClone'){
         carouselSlide.style.transition = "none";
         carouselCounter = carouselPics.length-2;
-        carouselSlide.style.transform = "translateX(" + (-size * carouselCounter) + "px)";
+        carouselSlide.style.transform = "translateX(" + (-100 * carouselCounter) + "%)";
     }
 
     if(carouselPics[carouselCounter].id === 'firstClone'){
         carouselSlide.style.transition = "none";
         carouselCounter = carouselPics.length-carouselCounter;
-        carouselSlide.style.transform = "translateX(" + (-size * carouselCounter) + "px)";
+        carouselSlide.style.transform = "translateX(" + (-100 * carouselCounter) + "%)";
     }
 })
 
