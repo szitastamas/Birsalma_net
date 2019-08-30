@@ -350,7 +350,7 @@ header{
 }
 
 .thefruit-card:nth-child(1) > .thefruit-card-pic{
-  background: url(../img/quince-1737596_1280.jpg) no-repeat center center/contain;
+  background: url(../img/triumph.jpg) no-repeat center center/cover;
 }
 
 .thefruit-card:nth-child(2) > .thefruit-card-pic{
