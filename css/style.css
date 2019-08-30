@@ -669,7 +669,7 @@ button:hover{
 #next-btn{
   padding: 1rem;
   border-radius: 50%;
-  background: whitesmoke;
+  background: rgba(80, 80, 80, 0.35);
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -684,7 +684,7 @@ button:hover{
 #prev-btn{
   padding: 1rem;
   border-radius: 50%;
-  background: whitesmoke;
+  background: rgba(80, 80, 80, 0.35);
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
