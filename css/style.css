@@ -31,7 +31,7 @@ body{
     color: var(--birs-color);
     text-transform: uppercase;
     letter-spacing: 2px;
-    font-size: 2rem;
+    font-size: 1.8rem;
     background: url(../img/Trenner2.png) no-repeat center center/contain;
     width: 100%;
 }
@@ -267,16 +267,26 @@ header{
   grid-template-columns: .75fr 1.75fr;
   position: relative;
   overflow: hidden;
+  height: 500px;
+  width: 100%;
+}
+
+.thefruit-card-container{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .thefruit-card{
   /* background: rgb(241, 241, 241); */
-  padding: 2rem 3rem;
+  /* padding: 2rem 1rem; */
   position: absolute;
   display: flex;
   opacity: 0;
   height: 100%;
-  width: 75%;
+  /* width: 75%; */
+  width: 100%;
   transform: translateX(30%);
   transition: 300ms all ease-out 0ms;
 }
@@ -289,24 +299,19 @@ header{
 }
 
 .thefruit-list-container{
-  padding: 5rem;
+  padding: 2rem 5rem;
+  padding: 0;
   text-align: center;
   position: relative;
 }
 
-/* .thefruit-list-container::after{
-  content: "";
-  position: absolute;
-  height: 75%;
-  width: 2px;
-  background: var(--birs-color);
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-} */
-
 .thefruit-list{
   list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
 }
 
 .thefruit-list-point{
@@ -320,9 +325,14 @@ header{
 }
 
 .thefruit-card-pic{
-  height: 100%;
-  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80%;
+  width: 30%;
   margin-right: 3rem;
+  top: 50%;
+  transform: translateY(-50%);
   background: url(../img/quince-1737596_1280.jpg) no-repeat center center/cover;
   position: relative;
 }
@@ -378,10 +388,27 @@ header{
 }
 
 .thefruit-card-text{
-  padding: 3rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0rem 3rem;
+  font-size: 1.1rem;
+  text-align: justify;
 }
 .thefruit-card-text > p{
   max-width: 550px;
+}
+
+.thefruit-sub-title{
+  font-size: 1.3rem;
+  font-weight: 500;
+  padding: 1rem 5rem;
+}
+
+.fruit-season{
+  margin: 1rem 0;
+  font-style: italic;
 }
 
 /* ABOUT US SECTION */
@@ -392,7 +419,9 @@ header{
   position: relative;
   overflow: hidden;
   padding-bottom: 3rem;
+  border-top: 8px solid var(--birs-color);
 }
+
 
 .about-us-container{
   width: 85%;
@@ -402,23 +431,52 @@ header{
 }
 
 .about-us-text-card{
-  margin: 0 2rem;
+  margin: 0 3rem;
 }
 
 .about-us-title{
   color: var(--birs-color);
   padding: 2rem 0 3rem 0;
+  font-size: 1.4rem;
+}
+
+.about-us-title::after{
+  content: "";
+  height: 400px;
+  width: 450px;
+  position: absolute;
+  left: 75%;
+  top: -13%;
+  background: url(../img/quincebranch3.png) no-repeat center center/contain;
+  z-index: -1;
+}
+
+
+.about-us-text-card:nth-child(2) > .about-us-title{
+  text-align: center;
 }
 
 .about-us-text{
-  line-height: 40px;
+  line-height: 30px;
   margin-bottom: 2rem;
+  font-size: 1rem;
+  text-align: justify;
 }
+
+.about-us-text > span > a{
+  color: var(--dark-birs);
+  transition: 150ms ease color;
+}
+
+.about-us-text > span > a:hover{
+  color: var(--birs-color);
+}
+
 
 #about-us > .section-top,
 #gallery > .section-top,
 #contact-section > .section-top{
-  padding: 2rem 8rem;
+  padding: 4rem 8rem;
 }
 
 
@@ -457,13 +515,17 @@ header{
 }
 
 .contact-icons{
-  padding: 2rem;
+  padding: 0;
   z-index: 1;
   
 }
 
 .contact-icons > p{
   padding: 0 0 2rem 0;
+}
+
+.contact-text > .landing-title{
+  padding: 2rem 0 1rem 0;
 }
 
 .contact-icons > div{
