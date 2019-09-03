@@ -328,7 +328,6 @@ header{
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 80%;
   width: 30%;
   margin-right: 3rem;
   top: 50%;
@@ -393,7 +392,7 @@ header{
   align-items: flex-start;
   justify-content: center;
   padding: 0rem 3rem;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   text-align: justify;
 }
 .thefruit-card-text > p{
@@ -884,7 +883,13 @@ footer{
     }
 
     .thefruit-card-text{
-      width: 45%;
+      width: 35%;
+      font-size: 1rem;
+    }
+
+    .thefruit-card-pic{
+      width: 30%;
+      height: 70%;
     }
 
   }
@@ -959,6 +964,22 @@ footer{
 
     .contact-section-container{
       width: 100%;
+      margin: 0 2rem;
+    }
+
+    .thefruit-card-pic{
+      height: 50%;
+      width: 25%;
+    }
+
+    .thefruit-card-text{
+      font-size: .9rem;
+      padding: 0;
+      padding-right: 3rem;
+    }
+
+    .form-branch{
+      left: 65%;
     }
 
     .contact-icons{
@@ -970,56 +991,6 @@ footer{
     }
   }
   
-  @media (max-width: 869px) {
-    section {
-      max-width: 100%;
-    }
-
-  
-    .nav-contact {
-      display: none;
-    }
-  
-    .menu-btn {
-      display: flex;
-    }
-  
-    .nav-links {
-      display: block;
-      transition: 300ms all ease-out;
-      max-height: 0;
-      opacity: 0;
-      overflow-y: hidden;
-      text-align: center;
-      /* border-top: 1px solid var(--türkiz); */
-    }
-  
-    .nav-links.menu-show {
-      transition: 300ms all ease-out;
-      max-height: 250px;
-      opacity: 1;
-    }
-  
-    #footer {
-      text-align: center;
-      font-size: 0.9rem;
-    }
-  
-    #contact-section{
-      flex-direction: column;
-      justify-content: center;
-      padding: 2rem 1rem;
-    }
-  
-    .contact-quote{
-      padding: 1rem 0;
-    }
-  
-    .contact-details-title{
-      font-size: 1.3rem;
-    }
-    
-  }
   
   .show {
     opacity: 1;
