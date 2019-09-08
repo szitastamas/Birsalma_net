@@ -358,33 +358,37 @@ header{
   right: -10%;
 }
 
+
+/* Triump */
 .thefruit-card:nth-child(1) > .thefruit-card-pic{
   background: url(../img/triumph.jpg) no-repeat center center/cover;
 }
 
+/* Bereczki */
 .thefruit-card:nth-child(2) > .thefruit-card-pic{
-  background: url(../img/quince-1812039_1920.jpg) no-repeat center center/cover;
+  background: url(../img/Bereczki-birs.jpg) no-repeat center center/cover;
 }
 
+/* Vranja */
 .thefruit-card:nth-child(3) > .thefruit-card-pic{
-  background: url(../img/quince-3747516_1280.jpg) no-repeat center center/cover;
-}
-
-.thefruit-card:nth-child(4) > .thefruit-card-pic{
   background: url(../img/vranjai.jpg) no-repeat center center/cover;
 }
 
-.thefruit-card:nth-child(5) > .thefruit-card-pic{
-  background: url(../img/quince-61574_1920.jpg) no-repeat center center/cover;
+/* Mezőzúri */
+.thefruit-card:nth-child(4) > .thefruit-card-pic{
+  background: url(../img/slider7.jpg) no-repeat center center/cover;
 }
 
-.thefruit-card:nth-child(6) > .thefruit-card-pic{
+/* Leskováci */
+.thefruit-card:nth-child(5) > .thefruit-card-pic{
   background: url(../img/leskovaci.jpg) no-repeat center center/cover;
 }
 
-.thefruit-card:nth-child(7) > .thedruid-card-pic{
-  background: url(../img/quince-1737596_1280.jpg) no-repeat center center/contain;
+/* Konstantinápolyi */
+.thefruit-card:nth-child(6) > .thefruit-card-pic{
+  background: url(../img/ornamental-quince-2684072_1920.jpg) no-repeat center center/cover;
 }
+
 
 .thefruit-card-text{
   display: flex;
@@ -450,16 +454,11 @@ header{
   z-index: -1;
 }
 
-
-.about-us-text-card:nth-child(2) > .about-us-title{
-  text-align: center;
-}
-
 .about-us-text{
   line-height: 30px;
   margin-bottom: 2rem;
   font-size: 1rem;
-  text-align: justify;
+  text-align: left;
 }
 
 .about-us-text > span > a{
@@ -523,6 +522,12 @@ header{
   padding: 0 0 2rem 0;
 }
 
+.contact-icons > a > img{
+  height: 400px;
+  width: 750px;
+  margin-bottom: 2rem;
+}
+
 .contact-text > .landing-title{
   padding: 2rem 0 1rem 0;
 }
@@ -548,7 +553,7 @@ header{
 .contact-container{
   height: 100%;
   width: 100%;
-  padding: 0 12rem;
+  padding: 0 5rem;
 }
 
 #contact-form{
@@ -892,6 +897,15 @@ footer{
       height: 70%;
     }
 
+    .contact-icons > a > img{
+      height: 350px;
+      width: 650px;
+    }
+
+    .contact-container{
+      padding: 0 1rem;
+    }
+
   }
 
   
@@ -909,8 +923,9 @@ footer{
     }
 
     #about-us > .section-top,
-    #gallery > .sectioin-top{
-      padding: 2rem 1rem;
+    #gallery > .section-top,
+    #contact-section > .section-top{
+      padding: 2rem 2rem;
       background: none;
     }
 
@@ -923,10 +938,6 @@ footer{
       margin: 0 1rem;
       position: relative;
       text-decoration: none;
-    }
-  
-    .bold {
-      display: none;
     }
   
     .nav-links > li {
@@ -965,6 +976,19 @@ footer{
     .contact-section-container{
       width: 100%;
       margin: 0 2rem;
+      
+      display: flex;
+      flex-direction: column;
+    }
+
+    .contact-container{
+      width: 100%;
+      padding: 0 6rem;
+      margin: auto;
+    }
+
+    #contact-form{
+      max-width: 80%;
     }
 
     .thefruit-card-pic{
@@ -979,16 +1003,37 @@ footer{
     }
 
     .form-branch{
-      left: 65%;
-    }
-
-    .contact-icons{
-      padding: 1rem;
+      left: 55%;
     }
 
     .contact-text{
-      padding: 0;
+      max-width: 90%;
+      margin: auto;
+      padding-left: 0;
     }
+
+    .contact-icons{
+      display: flex;
+      flex-direction: column;
+      padding: 1rem 0;
+      margin: auto;
+
+
+    }
+
+    .contact-icons > p{
+      padding: 0 0 2rem 0;
+    }
+
+    .contact-icons > a {
+      align-self: center;
+    }
+
+    .contact-icons > a > img{
+      height: 480px;
+      width: 95%;
+    }
+
   }
   
   
