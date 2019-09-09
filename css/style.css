@@ -315,7 +315,7 @@ header{
 }
 
 .thefruit-list-point{
-  padding: .5rem 2rem;
+  padding: .75rem 2rem;
 }
 
 .thefruit-card-title{
@@ -374,18 +374,13 @@ header{
   background: url(../img/vranjai.jpg) no-repeat center center/cover;
 }
 
-/* Mezőzúri */
-.thefruit-card:nth-child(4) > .thefruit-card-pic{
-  background: url(../img/slider7.jpg) no-repeat center center/cover;
-}
-
 /* Leskováci */
-.thefruit-card:nth-child(5) > .thefruit-card-pic{
+.thefruit-card:nth-child(4) > .thefruit-card-pic{
   background: url(../img/leskovaci.jpg) no-repeat center center/cover;
 }
 
 /* Konstantinápolyi */
-.thefruit-card:nth-child(6) > .thefruit-card-pic{
+.thefruit-card:nth-child(5) > .thefruit-card-pic{
   background: url(../img/ornamental-quince-2684072_1920.jpg) no-repeat center center/cover;
 }
 
@@ -481,7 +476,7 @@ header{
 /* CONTACT CONTAINER */
 
 #contact-section{
-  margin-bottom: 10rem;
+  margin-bottom: 3rem;
   overflow:  hidden;
 }
 
@@ -794,12 +789,115 @@ button:hover{
   border-radius: 50%;
 }
 
-/* HOW-TO-USE SECTION */
+/* REFERENCE SECTION */
 
-#how-to-use-section{
-  display: none;
+#reference > .landing-title{
+  text-align: center;
 }
 
+.reference-card-container{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1rem;
+  padding: 2rem 12rem;
+}
+
+
+.ref-card-pic{
+  width: 100%;
+  height: 300px;
+  transition: 250ms all ease-out;
+}
+
+.reference-card:hover > .ref-card-pic{
+  transform: translateY(-2%) scale(1.02);
+}
+
+.ref-card-bottom{
+  padding: 1rem .7rem;
+  background: rgba(231, 214, 24, .1);
+  text-align: center;
+  font-size: 1rem;
+  transition: 250ms background ease-out;
+}
+
+.reference-card:hover > .ref-card-bottom{
+  background: rgba(231, 214, 24, .2);
+}
+
+.reference-card:nth-child(1) > .ref-card-pic{
+  background: url(../img/Bekesi-Birs-Palinka-Manufaktura\ Birs.jpg) no-repeat center center/contain;
+}
+.reference-card:nth-child(2) > .ref-card-pic{
+  background: url(../img/Bolyhos\ birs.jpg) no-repeat center center/contain;
+}
+.reference-card:nth-child(3) > .ref-card-pic{
+  background: url(../img/Márton\ és\ Lányai\ birs.PNG) no-repeat center center/contain;
+}
+.reference-card:nth-child(4) > .ref-card-pic{
+  background: url(../img/magyar\ Talléros\ Pálinka\ birs.PNG) no-repeat center center/contain;
+}
+.reference-card:nth-child(5) > .ref-card-pic{
+  background: url(../img/Gyulai\ birs.PNG) no-repeat center center/contain;
+}
+.reference-card:nth-child(6) > .ref-card-pic{
+  background: url(../img/Potio\ nobilis\ birs.png) no-repeat center center/contain;
+}
+.reference-card:nth-child(7) > .ref-card-pic{
+  background: url(../img/Erős\ pálinkafőzde\ birs.jpg) no-repeat center center/contain;
+}
+.reference-card:nth-child(8) > .ref-card-pic{
+  background: url(../img/Csalló\ birs.jpg) no-repeat center center/contain;
+}
+.reference-card:nth-child(9) > .ref-card-pic{
+  background: url(../img/Árpád\ birs.jpg) no-repeat center center/contain;
+}
+.reference-card:nth-child(10) > .ref-card-pic{
+  background: url(../img/Alexander\ Birs.jpg) no-repeat center center/contain;
+}
+.reference-card:nth-child(11) > .ref-card-pic{
+  background: url(../img/Zwack\ birs.jpg) no-repeat center center/contain;
+}
+.reference-card:nth-child(12) > .ref-card-pic{
+  background: url(../img/Panyolai\ Pálinka.jpg) no-repeat center center/contain;
+}
+
+.auchan{
+  padding: 0rem 15rem;
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.auchan-pic{
+  height: 400px;
+  width: 400px;
+  background: url(../img/Auchan\ Magyarország\ Zrt..png) no-repeat center center/contain;
+  margin-bottom: -5rem;
+  margin-top: -5rem;
+}
+
+.auchan-text{
+  margin-bottom: 6rem;
+}
+
+.vid{
+  width: 100%;
+  margin: 0 auto 5rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+iframe{
+  height: 750px;
+  width: 75%;
+}
+
+/* FOOTER */
 
 footer{
   display: flex;
@@ -904,6 +1002,13 @@ footer{
 
     .contact-container{
       padding: 0 1rem;
+    }
+
+    .reference-card-container{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 1rem;
+      padding: 2rem 8rem;
     }
 
   }
@@ -1034,6 +1139,13 @@ footer{
     .contact-icons > a > img{
       height: 480px;
       width: 95%;
+    }
+
+    .reference-card-container{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 1rem;
+      padding: 2rem 6rem;
     }
 
   }
