@@ -229,16 +229,11 @@ function submitContact(e){
 let alertClass = "";
 let alertText = "";
 function alertStyling(){
-    if(getInputValue('name').length < 7 || getInputValue('message').length < 8){
-        alertClass = "error"
-        alertText = "Kérem töltsön ki megfelelően minden mezőt!"
-    }
-    else{
-        alertClass = "success"
-        alertText = "Köszönjük a levelét!"
-        contactForm.reset();
-    }
 
+    alertClass = "success"
+    alertText = "Köszönjük a levelét!"
+    contactForm.reset();
+    
     return alertClass;
 }
 
