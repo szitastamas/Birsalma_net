@@ -8,6 +8,12 @@ let callingSlider = setInterval(nextCarousel, 4000);
 window.onload = () => {
     carouselCounter = 0;
     callingSlider;
+    
+    if(window.innerWidth <= 1355)
+    {
+        document.querySelectorAll('.about-us-title')[1].textContent = "Gyümölcseink védelme";
+        document.querySelectorAll('.about-us-title')[0].textContent = "Termesztéstechnikánk";
+    }
 }
 
 /* SCROLLING EFFECTS AND BEHAVIOUR */
