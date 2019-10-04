@@ -161,37 +161,62 @@ const contactForm = document.getElementById('contact-form');
 contactForm.addEventListener('submit', submitContact);
 const alertMsg = document.querySelector('.alert');
 
+const checkBoxOverlay = document.querySelector('.checkbox-overlay');
+
+checkBoxOverlay.onclick = () => {
+    checkBoxOverlay.classList.toggle('checked');
+    if(checkBoxOverlay.classList.contains('checked')){
+        document.getElementById('privacy-check-box').checked = true;
+    }else{
+        document.getElementById('privacy-check-box').checked = false;
+    }
+}
+function isChecked ()
+    { 
+        return document.getElementById('privacy-check-box').checked;
+    }
+
+
 function submitContact(e){
     e.preventDefault();
 
-    var name = getInputValue('name');
-    var company = getInputValue('company');
-    var email = getInputValue('email');
-    var phone = getInputValue('phone');
-    var message = getInputValue('message');
+    if(!isChecked()){
+        checkBoxOverlay.classList.add('check-me');
+        setTimeout(() => checkBoxOverlay.classList.remove('check-me'), 1500)
+        e.preventDefault();
+    }else{
 
-    //saveMessage(name, company, email, phone, message);
+        var name = getInputValue('name');
+        var company = getInputValue('company');
+        var email = getInputValue('email');
+        var phone = getInputValue('phone');
+        var message = getInputValue('message');
     
-    alertMsg.style.opacity = "1";
-    alertMsg.style.transform = "none";
-    alertMsg.style.zIndex = "10";
-    alertMsg.classList.add(alertStyling());
-    alertMsg.innerHTML =
-        `<h2 style="margin-bottom: 2rem">Kedves ${name}!</h2>
-        <p>${alertText}</p>
-        `
+        //saveMessage(name, company, email, phone, message);
+        
+        alertMsg.style.opacity = "1";
+        alertMsg.style.transform = "none";
+        alertMsg.style.zIndex = "10";
+        alertMsg.classList.add(alertStyling());
+        alertMsg.innerHTML =
+            `<h2 style="margin-bottom: 2rem">Kedves ${name}!</h2>
+            <p>${alertText}</p>
+            `
+    
+        setTimeout(() => {
+            alertMsg.style.opacity = "0";
+            alertMsg.style.transform = "scale(.3)";
+            alertMsg.style.zIndex = "-5";
+            alertMsg.innerHTML = "";
+            alertMsg.classList = "alert";
+        }, 3000)
+    
+        setTimeout(() => {
+            alertMsg.style.transform = "translateY(-15rem)";
+        }, 3500)
+        checkBoxOverlay.classList.remove('checked');
+    }
 
-    setTimeout(() => {
-        alertMsg.style.opacity = "0";
-        alertMsg.style.transform = "scale(.3)";
-        alertMsg.style.zIndex = "-5";
-        alertMsg.innerHTML = "";
-        alertMsg.classList = "alert";
-    }, 3000)
-
-    setTimeout(() => {
-        alertMsg.style.transform = "translateY(-15rem)";
-    }, 3500)
 
 }
 
