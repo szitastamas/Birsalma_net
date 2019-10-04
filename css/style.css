@@ -429,7 +429,7 @@ header{
 }
 
 .about-us-text-card{
-  margin: 0 3rem;
+  margin: 0 2rem;
 }
 
 .about-us-title{
@@ -453,7 +453,8 @@ header{
   line-height: 30px;
   margin-bottom: 2rem;
   font-size: 1rem;
-  text-align: left;
+  text-align: justify;
+  padding: 0 1rem;
 }
 
 .about-us-text > span > a{
@@ -609,6 +610,97 @@ textarea{
   transition: 200ms all ease-in-out;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
+}
+
+.privacy-check-box-area{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  font-size: 1rem;
+  position: relative;
+}
+
+.privacy-check-box-area > p{
+  padding: 1rem 0rem 1rem 2rem;
+}
+
+#privacy-check-box{
+  border: none;
+  outline: var(--birs-color);
+  padding: 0;
+  margin: 1rem 0;
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkbox-overlay{
+  position: absolute;
+  top: 13px;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  border: .7px solid var(--birs-color);
+  transition: 200ms background ease-out;
+  cursor: pointer;
+}
+
+.checkbox-overlay::before{
+  content: "";
+  width: 3px;
+  height: 110%;
+  background-color: transparent;
+  left: 48%;
+  top: -.5px;
+  transform: rotate(45deg) translateX(-50%);
+  position: absolute;
+  transition: 100ms all ease-in-out;
+  transform-origin: center center;
+  border-radius: 5px;
+}
+
+.checkbox-overlay::after{
+  content: "";
+  width: 3px;
+  height: 110%;
+  background-color: transparent;
+  right: 40%;
+  top: -1.75px;
+  transform: rotate(-45deg) translateX(-50%);
+  position: absolute;
+  transition: 100ms all ease-in-out;
+  transform-origin: center center;
+  border-radius: 5px;
+}
+
+.checkbox-overlay.checked::before,
+.checkbox-overlay.checked::after{
+  background: white;
+}
+
+.checkbox-overlay:hover{
+  background: rgba(231, 214, 24, .3);
+}
+
+.checkbox-overlay.checked{
+  background: rgb(255, 236, 29);
+}
+
+.checkbox-overlay.check-me{
+  background: red;
+}
+
+.privacy-check-link{
+  color: var(--birs-color);
+  transition: 100ms color ease-out;
+}
+
+.privacy-check-link:hover{
+  color: rgb(255, 236, 29);
 }
 
 .submit-btn > button{
@@ -903,7 +995,7 @@ footer{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  text-align: right;
+  text-align: left;
   font-size: 1rem;
   padding: 1rem 4rem;
   color: var(--birs-color);
@@ -913,7 +1005,7 @@ footer{
 .impressum-section{
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
 }
 
@@ -948,6 +1040,18 @@ footer{
 .rights-section{
   margin: 10rem 30rem;
 }
+
+.rights-section > .landing-title{
+  padding-left: 0;
+}
+
+/* PRIVACY SECTION */
+
+.rights-paragraph{
+  padding: 1rem;
+}
+
+
 
   /* RESPONSIVENESS */
 
