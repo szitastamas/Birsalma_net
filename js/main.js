@@ -203,7 +203,7 @@ function isChecked ()
 
 
 function submitContact(e){
-
+    e.preventDefault();
 
     if(!isChecked()){
         checkBoxOverlay.classList.add('check-me');
@@ -239,7 +239,14 @@ function submitContact(e){
         setTimeout(() => {
             alertMsg.style.transform = "translateY(-15rem)";
         }, 3500)
+
         checkBoxOverlay.classList.remove('checked');
+        
+        document.getElementById("name").value = "";
+        document.getElementById("company").value = "";
+        document.getElementById("email").value = "";
+        document.getElementById("phone").value = "";
+        document.getElementById("message").value = "";
     }
 
 
