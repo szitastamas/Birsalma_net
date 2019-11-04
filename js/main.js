@@ -1,3 +1,19 @@
+/* Wire up FireBase */
+
+var firebaseConfig = {
+    apiKey: "AIzaSyCxnEAwvvNPCPy1pMjCsQlm3fQBStsjuBA",
+    authDomain: "birsalma-57942.firebaseapp.com",
+    databaseURL: "https://birsalma-57942.firebaseio.com",
+    projectId: "birsalma-57942",
+    storageBucket: "birsalma-57942.appspot.com",
+    messagingSenderId: "598839505955",
+    appId: "1:598839505955:web:5a5976a36182bedadc2d96",
+    measurementId: "G-NJQRZR90Y9"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+
 /* ON DOM CONTENT LOADED */
 
 const landingText = document.querySelector('.landing-text-container');
@@ -157,10 +173,13 @@ carouselPics.forEach(pic => pic.addEventListener('mouseleave', ()=>{
 }))
 
 
+
+
+
 /* CONTACT FORM */
 
 // Reference messages collection
-//var messagesRef = firebase.database().ref('messages');
+var messagesRef = firebase.database().ref('messages');
 
 const contactForm = document.getElementById('contact-form');
 
@@ -184,7 +203,7 @@ function isChecked ()
 
 
 function submitContact(e){
-    e.preventDefault();
+
 
     if(!isChecked()){
         checkBoxOverlay.classList.add('check-me');
@@ -198,7 +217,7 @@ function submitContact(e){
         var phone = getInputValue('phone');
         var message = getInputValue('message');
     
-        //saveMessage(name, company, email, phone, message);
+        saveMessage(name, company, email, phone, message);
         
         alertMsg.style.opacity = "1";
         alertMsg.style.transform = "none";
@@ -241,14 +260,14 @@ function getInputValue(id){
     return document.getElementById(id).value;
 }
 
-// Save message to firebase
-// function saveMessage(name, company, email, phone, message){
-//     var newMessageRef = messagesRef.push();
-//     newMessageRef.set({
-//       name: name,
-//       company:company,
-//       email:email,
-//       phone:phone,
-//       message:message
-//     });
-//   }
+//Save message to firebase
+function saveMessage(name, company, email, phone, message){
+    var newMessageRef = messagesRef.push();
+    newMessageRef.set({
+      name: name,
+      company:company,
+      email:email,
+      phone:phone,
+      message:message
+    });
+  }
