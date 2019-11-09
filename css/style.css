@@ -1115,7 +1115,7 @@ footer{
   }
 
   
-  @media (max-width: 1300px) {
+  @media (max-width: 1025px) {
 
     .landing-text-container{
       margin-right: 2rem;
@@ -1257,7 +1257,7 @@ footer{
     transform: none;
   }
 
-  @media(max-width: 1024px){
+  @media(max-width: 760px){
     
 
     /* SECTION TOP MOBILE - TABLET */ 
