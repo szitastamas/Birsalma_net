@@ -252,6 +252,70 @@ header{
   padding: 0 5rem 0 0;
 }
 
+/* ABOUT US SECTION */
+
+#about-us{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 3rem;
+  border-top: 8px solid var(--birs-color);
+}
+
+
+.about-us-container{
+  width: 85%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.about-us-text-card{
+  margin: 0 2rem;
+}
+
+.about-us-title{
+  color: var(--birs-color);
+  padding: 2rem 0 3rem 0;
+  font-size: 1.4rem;
+}
+
+.about-us-title::after{
+  content: "";
+  height: 400px;
+  width: 450px;
+  position: absolute;
+  left: 75%;
+  top: -13%;
+  background: url(../img/quincebranch3.png) no-repeat center center/contain;
+  z-index: -1;
+}
+
+.about-us-text{
+  line-height: 30px;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+  text-align: left;
+  padding: 0;
+}
+
+.about-us-text > span > a{
+  color: var(--dark-birs);
+  transition: 150ms ease color;
+}
+
+.about-us-text > span > a:hover{
+  color: var(--birs-color);
+}
+
+
+#about-us > .section-top,
+#gallery > .section-top,
+#contact-section > .section-top{
+  padding: 4rem 8rem;
+}
+
 /* THE FRUIT SECTION */
 
 #thefruit{
@@ -300,7 +364,6 @@ header{
 
 .thefruit-list-container{
   padding: 2rem 5rem;
-  padding: 0;
   text-align: center;
   position: relative;
 }
@@ -409,70 +472,247 @@ header{
   font-style: italic;
 }
 
-/* ABOUT US SECTION */
+/* PIC GALLERY CAROUSEL */
 
-#about-us{
+#gallery{
+  padding-bottom: 7rem;
+}
+
+.pic-gallery-container{
+  width: 80%;
+  height: 80vh;
+  margin: auto;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.carousel-slide{
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+.carousel-slide-card{
+  min-width: 100%;
+  height: 100%;
+}
+
+#firstClone{
+  background: url(../img/slider1.jpg) no-repeat center center/cover;
+}
+
+#lastClone{
+  background: url(../img/slider10.jpg) no-repeat center bottom/cover;
+}
+
+.carousel-slide-card:nth-child(2){
+  background: url(../img/slider1.jpg) no-repeat center center/cover;
+}
+
+.carousel-slide-card:nth-child(3){
+  background: url(../img/slider2.jpg) no-repeat center center/cover;
+}
+
+.carousel-slide-card:nth-child(4){
+  background: url(../img/slider3.jpg) no-repeat center center/cover;
+}
+
+.carousel-slide-card:nth-child(5){
+  background: url(../img/slider4.jpg) no-repeat center center/cover;
+}
+
+.carousel-slide-card:nth-child(6){
+  background: url(../img/slider5.jpg) no-repeat center center/cover;
+}
+
+.carousel-slide-card:nth-child(7){
+  background: url(../img/slider6.jpg) no-repeat center center/cover;
+}
+
+.carousel-slide-card:nth-child(8){
+  background: url(../img/slider7.jpg) no-repeat center center/cover;
+}
+
+.carousel-slide-card:nth-child(9){
+  background: url(../img/slider8.jpg) no-repeat center center/cover;
+}
+
+.carousel-slide-card:nth-child(10){
+  background: url(../img/slider9.jpg) no-repeat center center/cover;
+}
+
+.carousel-slide-card:nth-child(11){
+  background: url(../img/slider10.jpg) no-repeat center bottom/cover;
+}
+
+#next-btn{
+  padding: 1rem;
+  border-radius: 50%;
+  background: rgba(80, 80, 80, 0.35);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  color: var(--birs-color);
+  font-size: 25px;
+  cursor: pointer;
+  z-index: 20;
+  transition: 100ms all ease-in-out;
+}
+
+#prev-btn{
+  padding: 1rem;
+  border-radius: 50%;
+  background: rgba(80, 80, 80, 0.35);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0%;
+  color: var(--birs-color);
+  font-size: 25px;
+  cursor: pointer;
+  z-index: 20;
+  transition: 100ms all ease-in-out;
+}
+
+#prev-btn:hover,
+#next-btn:hover{
+  background: rgba(80, 80, 80, 0.55);
+}
+
+#progress-bar{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin-top: 10px;
+  height: 10px;
+  width: 0;
+  background: var(--birs-color);
+  z-index: 5;
+  transition: width 4000ms;
+}
+
+#pause-btn{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: 700ms ease opacity;
+  font-size: 55px;
+  background: rgba(80, 80, 80, 0.55);
+  color: var(--birs-color);
+  z-index: 20;
+  padding: 1rem;
+  border-radius: 50%;
+}
+
+/* REFERENCE SECTION */
+
+#reference > .landing-title{
+  text-align: center;
+}
+
+.reference-card-container{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1rem;
+  padding: 2rem 12rem;
+}
+
+
+.ref-card-pic{
+  width: 100%;
+  height: 300px;
+  transition: 250ms all ease-out;
+}
+
+.reference-card:hover > .ref-card-pic{
+  transform: translateY(-2%) scale(1.02);
+}
+
+.ref-card-bottom{
+  padding: 1rem .7rem;
+  background: rgba(231, 214, 24, .1);
+  text-align: center;
+  font-size: 1rem;
+  transition: 250ms background ease-out;
+}
+
+.reference-card:hover > .ref-card-bottom{
+  background: rgba(231, 214, 24, .2);
+}
+
+.reference-card:nth-child(1) > .ref-card-pic{
+  background: url(../img/Bekesi-Birs-Palinka-Manufaktura\ Birs.jpg) no-repeat center center/contain;
+}
+.reference-card:nth-child(2) > .ref-card-pic{
+  background: url(../img/Bolyhos\ birs.jpg) no-repeat center center/contain;
+}
+.reference-card:nth-child(3) > .ref-card-pic{
+  background: url(../img/Márton\ és\ Lányai\ birs.jpg) no-repeat center center/contain;
+}
+.reference-card:nth-child(4) > .ref-card-pic{
+  background: url(../img/magyar\ Talléros\ Pálinka\ birs.PNG) no-repeat center center/contain;
+}
+.reference-card:nth-child(5) > .ref-card-pic{
+  background: url(../img/Gyulai\ birs.PNG) no-repeat center center/contain;
+}
+.reference-card:nth-child(6) > .ref-card-pic{
+  background: url(../img/Potio\ nobilis\ birs.png) no-repeat center center/contain;
+}
+.reference-card:nth-child(7) > .ref-card-pic{
+  background: url(../img/Erős\ pálinkafőzde\ birs.jpg) no-repeat center center/contain;
+}
+.reference-card:nth-child(8) > .ref-card-pic{
+  background: url(../img/Csalló\ birs.jpg) no-repeat center center/contain;
+}
+.reference-card:nth-child(9) > .ref-card-pic{
+  background: url(../img/Árpád\ birs.jpg) no-repeat center center/contain;
+}
+.reference-card:nth-child(10) > .ref-card-pic{
+  background: url(../img/Alexander\ Birs.jpg) no-repeat center center/contain;
+}
+.reference-card:nth-child(11) > .ref-card-pic{
+  background: url(../img/Zwack\ birs.jpg) no-repeat center center/contain;
+}
+.reference-card:nth-child(12) > .ref-card-pic{
+  background: url(../img/Panyolai\ Pálinka.jpg) no-repeat center center/contain;
+}
+
+.auchan{
+  padding: 0rem 15rem;
+  width: 100%;
+  margin: auto;
+  text-align: center;
   display: flex;
   flex-direction: column;
-  position: relative;
-  overflow: hidden;
-  padding-bottom: 3rem;
-  border-top: 8px solid var(--birs-color);
+  align-items: center;
 }
 
-
-.about-us-container{
-  width: 85%;
-  margin: auto;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-}
-
-.about-us-text-card{
-  margin: 0 2rem;
-}
-
-.about-us-title{
-  color: var(--birs-color);
-  padding: 2rem 0 3rem 0;
-  font-size: 1.4rem;
-}
-
-.about-us-title::after{
-  content: "";
+.auchan-pic{
   height: 400px;
-  width: 450px;
-  position: absolute;
-  left: 75%;
-  top: -13%;
-  background: url(../img/quincebranch3.png) no-repeat center center/contain;
-  z-index: -1;
+  width: 400px;
+  background: url(../img/Auchan\ Magyarország\ Zrt..png) no-repeat center center/contain;
+  margin: -5rem 0;
 }
 
-.about-us-text{
-  line-height: 30px;
-  margin-bottom: 2rem;
-  font-size: 1rem;
-  text-align: left;
-  padding: 0;
+.auchan-text{
+  margin-bottom: 6rem;
 }
 
-.about-us-text > span > a{
-  color: var(--dark-birs);
-  transition: 150ms ease color;
+.vid{
+  width: 100%;
+  margin: 0 auto 5rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.about-us-text > span > a:hover{
-  color: var(--birs-color);
+iframe{
+  height: 750px;
+  width: 75%;
 }
-
-
-#about-us > .section-top,
-#gallery > .section-top,
-#contact-section > .section-top{
-  padding: 4rem 8rem;
-}
-
 
 /* CONTACT CONTAINER */
 
@@ -746,249 +986,6 @@ button:hover{
   background: rgba(255, 65, 65, 0.9);
 }
 
-/* PIC GALLERY CAROUSEL */
-
-#gallery{
-  padding-bottom: 7rem;
-}
-
-.pic-gallery-container{
-  width: 80%;
-  height: 80vh;
-  margin: auto;
-  position: relative;
-  overflow-x: hidden;
-}
-
-.carousel-slide{
-  display: flex;
-  height: 100%;
-  width: 100%;
-}
-
-.carousel-slide-card{
-  min-width: 100%;
-  height: 100%;
-}
-
-#firstClone{
-  background: url(../img/slider1.jpg) no-repeat center center/cover;
-}
-
-#lastClone{
-  background: url(../img/slider10.jpg) no-repeat center bottom/cover;
-}
-
-.carousel-slide-card:nth-child(2){
-  background: url(../img/slider1.jpg) no-repeat center center/cover;
-}
-
-.carousel-slide-card:nth-child(3){
-  background: url(../img/slider2.jpg) no-repeat center center/cover;
-}
-
-.carousel-slide-card:nth-child(4){
-  background: url(../img/slider3.jpg) no-repeat center center/cover;
-}
-
-.carousel-slide-card:nth-child(5){
-  background: url(../img/slider4.jpg) no-repeat center center/cover;
-}
-
-.carousel-slide-card:nth-child(6){
-  background: url(../img/slider5.jpg) no-repeat center center/cover;
-}
-
-.carousel-slide-card:nth-child(7){
-  background: url(../img/slider6.jpg) no-repeat center center/cover;
-}
-
-.carousel-slide-card:nth-child(8){
-  background: url(../img/slider7.jpg) no-repeat center center/cover;
-}
-
-.carousel-slide-card:nth-child(9){
-  background: url(../img/slider8.jpg) no-repeat center center/cover;
-}
-
-.carousel-slide-card:nth-child(10){
-  background: url(../img/slider9.jpg) no-repeat center center/cover;
-}
-
-.carousel-slide-card:nth-child(11){
-  background: url(../img/slider10.jpg) no-repeat center bottom/cover;
-}
-
-#next-btn{
-  padding: 1rem;
-  border-radius: 50%;
-  background: rgba(80, 80, 80, 0.35);
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  right: 0;
-  color: var(--birs-color);
-  font-size: 25px;
-  cursor: pointer;
-  z-index: 20;
-  transition: 100ms all ease-in-out;
-}
-
-#prev-btn{
-  padding: 1rem;
-  border-radius: 50%;
-  background: rgba(80, 80, 80, 0.35);
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  left: 0%;
-  color: var(--birs-color);
-  font-size: 25px;
-  cursor: pointer;
-  z-index: 20;
-  transition: 100ms all ease-in-out;
-}
-
-#prev-btn:hover,
-#next-btn:hover{
-  background: rgba(80, 80, 80, 0.55);
-}
-
-#progress-bar{
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  margin-top: 10px;
-  height: 10px;
-  width: 0;
-  background: var(--birs-color);
-  z-index: 5;
-  transition: width 4000ms;
-}
-
-#pause-btn{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  opacity: 0;
-  transition: 700ms ease opacity;
-  font-size: 55px;
-  background: rgba(80, 80, 80, 0.55);
-  color: var(--birs-color);
-  z-index: 20;
-  padding: 1rem;
-  border-radius: 50%;
-}
-
-/* REFERENCE SECTION */
-
-#reference > .landing-title{
-  text-align: center;
-}
-
-.reference-card-container{
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 1rem;
-  padding: 2rem 12rem;
-}
-
-
-.ref-card-pic{
-  width: 100%;
-  height: 300px;
-  transition: 250ms all ease-out;
-}
-
-.reference-card:hover > .ref-card-pic{
-  transform: translateY(-2%) scale(1.02);
-}
-
-.ref-card-bottom{
-  padding: 1rem .7rem;
-  background: rgba(231, 214, 24, .1);
-  text-align: center;
-  font-size: 1rem;
-  transition: 250ms background ease-out;
-}
-
-.reference-card:hover > .ref-card-bottom{
-  background: rgba(231, 214, 24, .2);
-}
-
-.reference-card:nth-child(1) > .ref-card-pic{
-  background: url(../img/Bekesi-Birs-Palinka-Manufaktura\ Birs.jpg) no-repeat center center/contain;
-}
-.reference-card:nth-child(2) > .ref-card-pic{
-  background: url(../img/Bolyhos\ birs.jpg) no-repeat center center/contain;
-}
-.reference-card:nth-child(3) > .ref-card-pic{
-  background: url(../img/Márton\ és\ Lányai\ birs.jpg) no-repeat center center/contain;
-}
-.reference-card:nth-child(4) > .ref-card-pic{
-  background: url(../img/magyar\ Talléros\ Pálinka\ birs.PNG) no-repeat center center/contain;
-}
-.reference-card:nth-child(5) > .ref-card-pic{
-  background: url(../img/Gyulai\ birs.PNG) no-repeat center center/contain;
-}
-.reference-card:nth-child(6) > .ref-card-pic{
-  background: url(../img/Potio\ nobilis\ birs.png) no-repeat center center/contain;
-}
-.reference-card:nth-child(7) > .ref-card-pic{
-  background: url(../img/Erős\ pálinkafőzde\ birs.jpg) no-repeat center center/contain;
-}
-.reference-card:nth-child(8) > .ref-card-pic{
-  background: url(../img/Csalló\ birs.jpg) no-repeat center center/contain;
-}
-.reference-card:nth-child(9) > .ref-card-pic{
-  background: url(../img/Árpád\ birs.jpg) no-repeat center center/contain;
-}
-.reference-card:nth-child(10) > .ref-card-pic{
-  background: url(../img/Alexander\ Birs.jpg) no-repeat center center/contain;
-}
-.reference-card:nth-child(11) > .ref-card-pic{
-  background: url(../img/Zwack\ birs.jpg) no-repeat center center/contain;
-}
-.reference-card:nth-child(12) > .ref-card-pic{
-  background: url(../img/Panyolai\ Pálinka.jpg) no-repeat center center/contain;
-}
-
-.auchan{
-  padding: 0rem 15rem;
-  width: 100%;
-  margin: auto;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.auchan-pic{
-  height: 400px;
-  width: 400px;
-  background: url(../img/Auchan\ Magyarország\ Zrt..png) no-repeat center center/contain;
-  margin-bottom: -5rem;
-  margin-top: -5rem;
-}
-
-.auchan-text{
-  margin-bottom: 6rem;
-}
-
-.vid{
-  width: 100%;
-  margin: 0 auto 5rem auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-iframe{
-  height: 750px;
-  width: 75%;
-}
-
 /* FOOTER */
 
 footer{
@@ -1005,7 +1002,7 @@ footer{
 .impressum-section{
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
 }
 
@@ -1118,7 +1115,7 @@ footer{
   }
 
   
-  @media (max-width: 1025px) {
+  @media (min-width: 1025px) {
 
     .landing-text-container{
       margin-right: 2rem;
@@ -1258,4 +1255,284 @@ footer{
   .show {
     opacity: 1;
     transform: none;
+  }
+
+  @media(max-width: 1024px){
+    
+
+    /* SECTION TOP MOBILE - TABLET */ 
+
+    .section-top,
+    #about-us > .section-top,
+    #contact-section > .section-top,
+    #gallery > .section-top{
+      padding: 1rem .8rem;
+      font-size: 1.2rem;
+      background: white;
+    }
+
+    .nav-container{
+      position: relative;
+    }
+
+    header{
+      height: auto;
+    }
+
+
+    /* LANDING SECTION MOBILE - TABLET */
+
+    .landing-overlay{
+      background: rgba(0, 0, 0, 0.335);
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      z-index: 1;
+    }
+
+    .landing-text-container{
+      padding: 1rem .8rem;
+      margin: 0;
+      margin-right: 0;
+      width: 100%;
+      margin-right: 0;
+      max-width: auto;
+      max-height: auto;
+      z-index: 2;
+    }
+
+    .landing-title{
+      font-size: 1.3rem;
+      padding: 0;
+      margin: .7rem 0;
+    }
+
+    .landing-text{
+      font-size: 1rem;
+      padding: 0;
+      margin: 0;
+    }
+
+
+    /* ABOUT SECTION MOBILE-TABLET */
+
+    .about-us-container{
+      width: 100%;
+      display: block;
+    }
+
+    .about-us-text-card{
+      transition: all 300ms ease-out;
+    }
+
+    .about-us-title{
+      padding: 1rem .5rem;
+      box-shadow: inset 0 0 0 2px var(--birs-color);
+      font-size: 1.1rem;
+      margin-bottom: .4rem;
+      cursor: pointer;
+    }
+
+    .about-us-text-card:first-child{
+      margin-top: 6rem;
+    }
+
+    .about-us-title::after{
+      top: -16%;
+      left: 60%;
+    }
+
+    .about-us-text{
+      max-height: 0;
+      opacity: 0;
+      text-align: left;
+      margin: 0.8rem 0;
+      padding: 0;
+      display: none;
+    }
+
+    .card-open{
+      display: block;
+      animation: openCard 1000ms forwards;
+    }
+
+    @keyframes openCard{
+      100%{opacity: 1; max-height: 100%;}
+    }
+
+
+    /* THE FRUIT SECTION MOBILE - TABLET */
+
+    #thefruit{
+      overflow: visible;
+    }
+
+    .thefruit-container{
+      display: block;
+      overflow: visible;
+      height: auto;
+    }
+    .thefruit-sub-title{
+      padding: .7rem;
+      font-size: 1.2rem;
+    }
+
+    .thefruit-list-container{
+      padding: 0;
+      display: none;
+      overflow: scroll;
+      height: auto;
+    }
+
+    .thefruit-list{
+      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .thefruit-card{
+      position: relative;
+      opacity: 1;
+      display: block;
+      transform: none;
+      margin-bottom: 1rem;
+    }
+    
+    
+    .thefruit-card-pic{
+      border-top: 4px solid var(--birs-color);
+      border-bottom: 4px solid var(--birs-color);
+      transform: none;
+      margin-right: 0;
+      position: relative;
+      display: block;
+      width: 100%;
+      height: 400px;
+      background-size: contain;
+      top: 0;
+    }
+
+    .thefruit-card-pic::before,
+    .thefruit-card-pic::after{
+      height: 0;
+      width: 0;
+      padding: 0;
+    }
+
+    .thefruit-card-container{
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      overflow: auto;
+    }
+
+    .thefruit-card-text{
+      margin: 0;
+      width: 100%;
+      padding: .7rem;
+    }
+
+    /* GALLERY SECTION MOBILE-TABLET */
+
+    #gallery{
+      padding-bottom: 1rem;
+    }
+    .pic-gallery-container{
+      height: 200px;
+      width: 100%;
+    }
+
+    /* REFERENCE SECTION MOBILE - TABLET */
+
+    #reference > .landing-title{
+      font-size: 1rem;
+      padding: 1rem;
+      text-align: left;
+      color: #333;
+      font-weight: 400;
+    }
+
+    .reference-card-container{
+      padding: 0;
+      display: block;
+    }
+
+    .ref-card-pic{
+      height: 180px;
+    }
+
+
+    .auchan{
+      padding: 0;
+    }
+
+    .auchan-pic{
+      height: 180px;
+      width: 180px;
+      margin: 1rem 0;
+    }
+
+    .auchan-text{
+      padding: 0 1rem;
+    }
+
+    /* CONTACT SECTION MOBILE - TABLET */
+
+    .contact-section-container{
+      width: 100%;
+      display: block;
+      padding: 1rem;
+    }
+
+    .contact-text{
+      padding: 0;
+    }
+
+    .contact-text > .landing-title{
+      padding: 0;
+    }
+
+    .contact-icons > p{
+      padding: 0;
+    }
+
+    .contact-icons > a > img{
+    
+      height: 180px;
+      width: 100%;
+    
+    }
+
+    #contact-form{
+      padding: 0;
+    }
+
+
+    .privacy-check-box-area{
+      font-size: .85rem;
+    }
+
+    .checkbox-overlay{
+      height: 20px;
+      width: 20px;
+      top: 15px;
+    }
+
+    .vid{
+      padding: 1rem;
+    }
+
+    iframe{
+      height: 200px;
+      width: 100%;
+    }
+
+    /* FOOTER MOBILE - TABLET */
+
+    footer{
+      flex-direction: column;
+      padding: 1rem;
+      text-align: center;
+    }
+
   }
