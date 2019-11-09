@@ -1271,14 +1271,19 @@ footer{
       background: white;
     }
 
+   /* NAVIGATION SECTION MOBILE - TABLET */
+    
     .nav-container{
       position: relative;
+    }
+
+    .nav-links{
+      display: none;
     }
 
     header{
       height: auto;
     }
-
 
     /* LANDING SECTION MOBILE - TABLET */
 
