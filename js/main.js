@@ -278,3 +278,13 @@ function saveMessage(name, company, email, phone, message){
       message:message
     });
   }
+
+// Responsive behaviour
+
+  const aboutTextCardTitle = document.querySelectorAll('.about-us-title');
+
+  aboutTextCardTitle.forEach(title => title.addEventListener('click',(e) => {
+       e.target.nextElementSibling.classList.toggle('card-open');
+       e.target.nextElementSibling.nextElementSibling.classList.toggle('card-open');
+
+  }))
