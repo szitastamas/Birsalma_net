@@ -1482,6 +1482,7 @@ footer{
       width: 100%;
       display: block;
       padding: 1rem;
+      margin: 0;
     }
 
     .contact-text{
@@ -1503,8 +1504,13 @@ footer{
     
     }
 
+    .contact-container{
+      padding: .8rem;
+    }
+
     #contact-form{
       padding: 0;
+      max-width: 100%;
     }
 
 
@@ -1525,6 +1531,11 @@ footer{
     iframe{
       height: 200px;
       width: 100%;
+    }
+
+    .form-branch{
+      left: 70%;
+      transform: rotate(-5deg);
     }
 
     /* FOOTER MOBILE - TABLET */
