@@ -1,7 +1,7 @@
 /* Wire up FireBase */
 
 var firebaseConfig = {
-    apiKey: process.env.API_KEY,
+    apiKey: API_KEY,
     authDomain: "birsalma-57942.firebaseapp.com",
     databaseURL: "https://birsalma-57942.firebaseio.com",
     projectId: "birsalma-57942",
